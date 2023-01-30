@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fridas slutprojekt</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <main>
+        <div id="container">
+            <div id="inputsDiv">
+                <form id="searchForm">
+                    <input type="text" id="searchText" placeholder="🔍 Search for images" required /> 
+
+                    <div class="group">
+                        <label for="numberOfImg">Number of images: </label>
+                        <input type="number" id="numberOfImg" min="1" max="499" value="1" required />
+                    
+                        <label for="imgSize">Image Size:</label>
+                        <select id="imgSize" name="imgSize">
+                            <option value="m">Small</option>
+                            <option value="z">Medium</option>
+                            <option value="b">Large</option>
+                        </select>
+
+                        <label for="sort">Sort:</label>
+                        <select name="sort" id="sortImg" form="searchForm">
+                            <option value="relevance">Relevant</option>
+                            <option value="date-taken-asc">Date Taken Ascendant</option>
+                            <option value="date-taken-desc">Date Taken Descendant</option>
+                            <option value="interestingness-asc">Interesting</option>
+                        </select>
+                
+                        <button id="searchButton">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div id="errorMessageDiv"></div>
+       
+        <div id="imagesDiv"></div>
+
+    </main>
+</body>
+</html>
